@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: guest-config
+data:
+  name: guest
+  age: 20
+  city: New York
+  country: USA
+  email: guest@example.com
+  phone: 1234567890
+  address: 123 Main St, Anytown, USA
+  zip: 12345
+  state: NY
