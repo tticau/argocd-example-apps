@@ -15,4 +15,3 @@ spec:
             - configMapRef:
                 name: db-config
           command: ["sh", "-c", "echo 'Checking db data:'; host=$HOST; port=$PORT; username=$USERNAME; password=$PASSWORD; echo 'Host: $host, Port: $port, Username: $username, Password: $password'; sleep 5; echo 'Done!'"]
-          restartPolicy: Never
