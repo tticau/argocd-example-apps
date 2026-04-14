@@ -4,8 +4,8 @@ metadata:
   name: db-config
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-data:
-  host: postgres
-  port: 5432
-  username: postgres
-  password: postgres
+data: 
+  host: "postgres"
+  port: "5432"
+  username: "postgres"
+  password: "postgres"
