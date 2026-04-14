@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: db-check
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      containers:
+        - name: db-check
+          image: busybox:latest
+          envFrom:
+            - configMapRef:
+                name: db-config
+          command: ["sh", "-c", "echo 'Checking db data:'; host=$HOST; port=$PORT; username=$USERNAME; password=$PASSWORD; echo 'Host: $host, Port: $port, Username: $username, Password: $password'; sleep 5; echo 'Done!'"]
+          restartPolicy: Never
