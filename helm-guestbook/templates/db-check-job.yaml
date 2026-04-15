@@ -11,7 +11,4 @@ spec:
       containers:
         - name: db-check
           image: busybox:latest
-          envFrom:
-            - configMapRef:
-                name: db-config
           command: ["sh", "-c", "echo 'Checking db data:'; sleep 5; echo 'Done!'"]
