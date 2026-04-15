@@ -14,4 +14,4 @@ spec:
           envFrom:
             - configMapRef:
                 name: db-config
-          command: ["sh", "-c", "echo 'Checking db data:'; echo \"Host: $host, Port: $port, Username: $username, Password: $password\"; sleep 5; echo 'Done!'"]
+          command: ["sh", "-c", "echo 'Checking db data:'; sleep 5; echo 'Done!'"]
