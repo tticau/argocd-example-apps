@@ -7,6 +7,7 @@ metadata:
 spec:
   template:
     spec:
+      restartPolicy: "Never"
       containers:
         - name: db-check
           image: busybox:latest
